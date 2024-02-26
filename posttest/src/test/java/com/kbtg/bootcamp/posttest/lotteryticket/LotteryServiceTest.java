@@ -67,7 +67,7 @@ class LotteryServiceTest {
         when(lotteryTicketRepository.findById(lotteryId)).thenReturn(Optional.empty());
 
         Exception exception = assertThrows(NoSuchElementException.class, () -> {
-            lotteryService.getLotteryTicketById(lotteryId).orElseThrow(() -> new NoSuchElementException("Lottery ticket not found with id " + lotteryId));
+            lotteryService.getLotteryTicketById(lotteryId).orElseThrow(() -> new NoSuchElementException("Lottery ticket not found with id" + lotteryId));
         });
 
         String expectedMessage = "Lottery ticket not found with id" + lotteryId;

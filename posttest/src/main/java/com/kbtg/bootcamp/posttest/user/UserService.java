@@ -36,7 +36,7 @@ public class UserService {
     }
 
     public Optional<User> getUserById(Long userId) {
-        return Optional.ofNullable(userRepository.findById(userId).orElseThrow(() -> new NoSuchElementException("No user found with ID: " + userId)));
+        return Optional.ofNullable(userRepository.findById(userId).orElseThrow(() -> new NoSuchElementException("No user found with id " + userId)));
     }
 
 }

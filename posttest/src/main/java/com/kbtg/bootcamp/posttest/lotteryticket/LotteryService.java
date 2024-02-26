@@ -22,6 +22,6 @@ public class LotteryService {
     }
 
     public Optional<LotteryTicket> getLotteryTicketById(Long lotteryId) {
-        return Optional.ofNullable(lotteryTicketRepository.findById(lotteryId).orElseThrow(() -> new NoSuchElementException("No lottery found with ID: " + lotteryId)));
+        return Optional.ofNullable(lotteryTicketRepository.findById(lotteryId).orElseThrow(() -> new NoSuchElementException("Lottery ticket not found with id" + lotteryId)));
     }
 }
